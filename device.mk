@@ -278,6 +278,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     DragonKeyboard
 
+# Wi-Fi country code setting
+PRODUCT_PACKAGES += \
+    DragonParts
+
 # Vibrator HAL
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl

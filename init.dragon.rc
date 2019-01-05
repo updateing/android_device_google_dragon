@@ -90,10 +90,11 @@ on post-fs-data
     mkdir /data/vendor/wifi 0755 wifi wifi
     mkdir /data/vendor/wifi/wpa 0755 wifi wifi
 
+    setprop vold.post_fs_data_done 1
+
+on property:ro.persistent_properties.ready=true
     # initialize region info
     exec -- /system/bin/init_regions.sh
-
-    setprop vold.post_fs_data_done 1
 
 on boot
     # power down interface
