@@ -83,7 +83,7 @@ vendor/lib/egl/libGLESv2_tegra.so
 vendor/lib/hw/gralloc.tegra.so
 vendor/lib/hw/memtrack.dragon.so
 vendor/lib/hw/vulkan.tegra.so
-vendor/lib/libglcore.so|660906edaab812f65d571f1cd2429e61906e84ad
+vendor/lib/libglcore.so
 vendor/lib/libnvglsi.so
 vendor/lib/libnvgr.so
 vendor/lib/libnvos.so
@@ -98,7 +98,7 @@ vendor/lib64/egl/libGLESv2_tegra.so
 vendor/lib64/hw/gralloc.tegra.so
 vendor/lib64/hw/memtrack.dragon.so
 vendor/lib64/hw/vulkan.tegra.so
-vendor/lib64/libglcore.so|585d97565186bef06c40f365d2e5cb2060c0f234
+vendor/lib64/libglcore.so
 vendor/lib64/libnvglsi.so
 vendor/lib64/libnvgr.so
 vendor/lib64/libnvrm.so
@@ -123,7 +123,7 @@ vendor/lib/libnvmmlite_image.so
 vendor/lib/libnvmmlite_msaudio.so
 vendor/lib/libnvmmlite_utils.so
 vendor/lib/libnvmmlite_video.so
-vendor/lib/libnvomx.so|e564940e2e151dea064e2fe96d484f8c22938242
+vendor/lib/libnvomx.so
 vendor/lib/libnvomxilclient.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libtlk_secure_hdcp_up.so
