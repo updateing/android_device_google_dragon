@@ -1,0 +1,15 @@
+//
+// Static library for board custom healthd extension
+//
+
+cc_library_static {
+    name: "libhealthd.dragon",
+
+    srcs: ["healthd-dragon.cpp"],
+
+    static_libs: ["libcutils"],
+
+    header_libs: ["libhealthd_headers"],
+
+    vendor_available: true
+}
