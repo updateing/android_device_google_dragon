@@ -10,9 +10,14 @@ allow cameraserver gpu_device:chr_file rw_file_perms;
 allow cameraserver host1x_device:chr_file rw_file_perms;
 
 # /sys and /proc access
-allow cameraserver { proc proc_meminfo }:{ file lnk_file } r_file_perms;
-r_dir_file(cameraserver, sysfs)
+#allow cameraserver { proc proc_meminfo }:{ file lnk_file } r_file_perms;
+#r_dir_file(cameraserver, sysfs)
+# TODO: NEED TO NARROW DOWN!
 
 allow cameraserver system_file:dir r_dir_perms;
-allow cameraserver vendor_file_type:dir r_dir_perms;
+allow cameraserver {
+    vendor_file_type
+    -vendor_app_file
+    -vendor_overlay_file
+}:dir r_dir_perms;
 allow cameraserver tmpfs:dir search;

@@ -31,7 +31,7 @@
 /sys/module/bcmdhd/parameters/firmware_path     u:object_r:sysfs_wlan_fwpath:s0
 
 # system executables
-/system/bin/rmi4update                          u:object_r:rmi4update_exec:s0
+/vendor/bin/rmi4update                          u:object_r:rmi4update_exec:s0
 
 # vendor executables
 /vendor/bin/dump_bq25892\.sh                    u:object_r:dump_bq25892_exec:s0
@@ -42,9 +42,9 @@
 /vendor/bin/tune-thermal-gov\.sh                u:object_r:thermal_gov_exec:s0
 
 # crash_collector
-/system/bin/crash_dispatcher                    u:object_r:crash_collector_exec:s0
-/system/bin/crash_collector32                   u:object_r:crash_collector_exec:s0
-/system/bin/crash_collector64                   u:object_r:crash_collector_exec:s0
+/vendor/bin/crash_dispatcher                    u:object_r:crash_collector_exec:s0
+/vendor/bin/crash_collector32                   u:object_r:crash_collector_exec:s0
+/vendor/bin/crash_collector64                   u:object_r:crash_collector_exec:s0
 /data/vendor/crash_reports(/.*)?                u:object_r:crash_reports_data_file:s0
 
 # camera

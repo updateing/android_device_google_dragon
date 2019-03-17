@@ -1,16 +1,16 @@
 # permissions for /vendor/bin/dump_bq25892.sh
 # which is used to debug information about the state of the charger chip
-type dump_bq25892, domain, device_domain_deprecated;
+type dump_bq25892, domain;
 type dump_bq25892_exec, exec_type, file_type, vendor_file_type;
 type fw_logs_data_file, file_type, data_file_type;
 
 init_daemon_domain(dump_bq25892)
 
 # Run a shell.
-allow dump_bq25892 shell_exec:file rx_file_perms;
+allow dump_bq25892 vendor_shell_exec:file rx_file_perms;
 
 # Run toybox.
-allow dump_bq25892 toolbox_exec:file rx_file_perms;
+allow dump_bq25892 vendor_toolbox_exec:file rx_file_perms;
 
 # Use fwtool to communicate with the EC through /dev/cros_ec
 allow dump_bq25892 fwtool_exec:file rx_file_perms;
