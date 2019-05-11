@@ -45,6 +45,9 @@ write_makefiles "$MY_DIR"/proprietary-files.txt true
 
 # Deal with files that needs to be put in rootfs
 if [ -f proprietary-files-rootfs.txt ]; then
+    # These blobs also need to be put in vendor (for System-as-Root)
+    write_makefiles "$MY_DIR"/proprietary-files-rootfs.txt true
+
     # We will change PRODUCTMK to create a new file.
     # Save original value and restore when done.
     SAVED_PRODUCTMK=$PRODUCTMK
