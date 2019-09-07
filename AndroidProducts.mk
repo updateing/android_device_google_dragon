@@ -15,4 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/mk_dragon.mk
+	$(LOCAL_DIR)/aosp_dragon.mk
+
+COMMON_LUNCH_CHOICES := aosp_dragon-eng aosp_dragon-userdebug

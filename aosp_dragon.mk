@@ -26,9 +26,9 @@ $(call inherit-product, device/google/dragon/product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit some common MK stuff.
-$(call inherit-product, vendor/mk/config/common_full_tablet_wifionly.mk)
+#$(call inherit-product, vendor/mk/config/common_full_tablet_wifionly.mk)
 
-PRODUCT_NAME := mk_dragon
+PRODUCT_NAME := aosp_dragon
 PRODUCT_DEVICE := dragon
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel C
