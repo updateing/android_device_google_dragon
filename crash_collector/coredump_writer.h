@@ -89,7 +89,8 @@ class CoredumpWriter {
   size_t coredump_size_limit_ = 0;
   size_t expected_coredump_size_ = 0;
 
-  DISALLOW_COPY_AND_ASSIGN(CoredumpWriter);
+  CoredumpWriter(const CoredumpWriter&);
+  CoredumpWriter& operator=(const CoredumpWriter&);
 };
 
 #endif  // COREDUMP_WRITER_H_

@@ -16,6 +16,7 @@
 
 #define LOG_TAG "healthd-dragon"
 #include <healthd/healthd.h>
+#include <unistd.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <cutils/klog.h>
