@@ -122,6 +122,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/BCM4354_003.001.012.0443.0863.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm4350c0.hcd \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
 
+# Treble
+PRODUCT_VENDOR_MOVE_ENABLED := true
+PRODUCT_SHIPPING_API_LEVEL := 23
+PRODUCT_TREBLE_LINKER_NAMESPACES_OVERRIDE := false
+
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
     libbt-vendor \
