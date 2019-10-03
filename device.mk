@@ -131,7 +131,8 @@ PRODUCT_TREBLE_LINKER_NAMESPACES_OVERRIDE := false
 PRODUCT_PACKAGES += \
     libbt-vendor \
     android.hardware.bluetooth@1.0-impl-dragon \
-    android.hardware.bluetooth@1.0-service
+    android.hardware.bluetooth@1.0-service \
+    android.hardware.bluetooth.audio@2.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -265,10 +266,10 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
+    android.hardware.audio@5.0-impl:32 \
     android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.soundtrigger@2.0-impl
+    android.hardware.audio.effect@5.0-impl:32 \
+    android.hardware.soundtrigger@2.2-impl:32
 
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
