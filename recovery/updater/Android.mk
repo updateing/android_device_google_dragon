@@ -36,7 +36,7 @@ LOCAL_C_INCLUDES += bootable/recovery
 # For vboot_struct.h
 LOCAL_C_INCLUDES += external/vboot_reference/firmware/include
 LOCAL_CFLAGS += -Werror
-LOCAL_STATIC_LIBRARIES := libedify
+LOCAL_STATIC_LIBRARIES := libedify librecovery_ui_default
 LOCAL_HEADER_LIBRARIES := libcutils_headers
 
 include $(BUILD_STATIC_LIBRARY)
