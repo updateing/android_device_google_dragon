@@ -43,30 +43,30 @@ write_headers "$DEVICE"
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
-# Deal with files that needs to be put in rootfs
-if [ -f proprietary-files-rootfs.txt ]; then
+# Deal with files that needs to be put in ramdisk
+if [ -f proprietary-files-ramdisk.txt ]; then
     # These blobs also need to be put in vendor (for System-as-Root)
-    write_makefiles "$MY_DIR"/proprietary-files-rootfs.txt true
+    write_makefiles "$MY_DIR"/proprietary-files-ramdisk.txt true
 
     # We will change PRODUCTMK to create a new file.
     # Save original value and restore when done.
     SAVED_PRODUCTMK=$PRODUCTMK
-    export PRODUCTMK=${PRODUCTMK/%.mk/-rootfs.mk}
+    export PRODUCTMK=${PRODUCTMK/%.mk/-ramdisk.mk}
 
     # Copyright headers but not guards
     write_header "$PRODUCTMK"
 
     # General copy routine
-    parse_file_list proprietary-files-rootfs.txt
+    parse_file_list proprietary-files-ramdisk.txt
 
     # Require using "system/vendor" instead of $(TARGET_COPY_OUT_VENDOR),
     # make the following sed easier
     write_product_copy_files FALSE
 
-    # The key: replace system/ in target with root/
-    sed -i 's|:system|:root|g' "$PRODUCTMK"
+    # The key: replace system/ in target with ramdisk/
+    sed -i 's|:system|:ramdisk|g' "$PRODUCTMK"
 
-    # Include rootfs file list
+    # Include ramdisk file list
     printf "\n\$(call inherit-product,vendor/$VENDOR/$DEVICE/$(basename $PRODUCTMK))" >> $SAVED_PRODUCTMK
 
     # Restore file name
